@@ -42,3 +42,17 @@ class BackgroundVerticalAlignment(Enum):
     TOP = "top"
     CENTER = "center"
     BOTTOM = "bottom"
+
+
+class TextBlockStyle(Enum):
+    DEFAULT = "default"
+    HEADING = "heading"
+
+class TextColor(Enum):
+    DEFAULT = "default"
+    DARK = "dark"
+    LIGHT = "light"
+    ACCENT = "accent"
+    GOOD = "good"
+    WARNING = "warning"
+    ATTENTION = "attention"

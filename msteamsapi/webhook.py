@@ -5,7 +5,7 @@ import requests
 class TeamsWebhook(object):
     def __init__(self, webhook_url):
         self.webhook_url = webhook_url
-        self.payload = dict(attachments=[])
+        self.payload = dict(type="message", attachments=[])
 
     def add_cards(self, *cards):
         """
@@ -32,6 +32,7 @@ class TeamsWebhook(object):
         :return: Response object from the webhook request.
         """
         headers = {"Content-Type": "application/json"}
+        print(self.payload)
         response = requests.post(self.webhook_url, headers=headers, json=self.payload)
         if response.status_code not in (200, 202):
             raise Exception("Failed to send card: %s, %s" % (response.status_code, response.text))

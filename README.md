@@ -3,7 +3,7 @@
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 [![Russian Warship Go Fuck Yourself](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/RussianWarship.svg)](https://stand-with-ukraine.pp.ua)
 
-# Microsoft Teams AdaptiveCards API Wrapper for Python 2 and 3
+# Microsoft Teams AdaptiveCards API Wrapper for 3
 
 ##### Repository: https://github.com/ALERTua/msteamsapi
 ##### PyPi: https://pypi.org/project/msteamsapi/
@@ -19,8 +19,9 @@
 - Get a Workflow Webhook URL for your MSTeams non-private(!) channel using the standard template `Post to a channel when a webhook request is received`.
 - Use the Webhook URL to instantiate `TeamsWebhook` class.
 - Fill the `TeamsWebhook` with `AdaptiveCard`.
-- Fill the `AdaptiveCard` with `Container`.
+- Fill the `AdaptiveCard` with `Container` or `Table`.
 - Fill the `Container` with `FactSet`, `TextBlock`, etc.
+- Fill the `Table` with `TableCell` containing `TextBlock`, other `Table`, etc.
 - `send()` the `TeamsWebhook` instance.
 
 Example from [tests/test_suite.py](tests/test_suite.py):

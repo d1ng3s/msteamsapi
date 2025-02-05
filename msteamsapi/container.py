@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from msteamsapi.enums import ContainerStyle, TextSize, TextWeight
+from msteamsapi.table import CompoundButton
 
 
 class Container(object):  # https://adaptivecards.io/explorer
@@ -43,6 +44,18 @@ class Container(object):  # https://adaptivecards.io/explorer
         """
         image = dict(type="Image", url=url, altText=alt_text)
         self._add_item(image)
+
+    def add_compound_button(self, compound_button: CompoundButton):
+        """
+        Add a CompoundButton to the container.
+
+        Args:
+            title (str): the title
+            badge (str): the badge on it
+            separator (bool): use a separator or not
+            description (str): describe what this element is for
+        """
+        self._add_item(compound_button.to_dict())
 
     def to_dict(self):
         """

@@ -2,8 +2,8 @@
 import json
 
 from msteamsapi.container import Container
-from msteamsapi.enums import (ContainerStyle, TextSize, BackgroundVerticalAlignment,
-                              BackgroundHorizontalAlignment, BackgroundFillMode)
+from msteamsapi.table import Table, CompoundButton
+from msteamsapi.enums import ContainerStyle, TextSize
 
 
 class AdaptiveCard(object):
@@ -17,7 +17,7 @@ class AdaptiveCard(object):
         """
         self.card = {
             "type": "AdaptiveCard",
-            "version": "1.4",
+            "version": "1.5",
             "body": [],
             "actions": [],
             "msteams": {
@@ -39,6 +39,21 @@ class AdaptiveCard(object):
         :type container: Container
         """
         self.card["body"].append(container.to_dict())
+
+    def add_table(self, table: Table):
+        self.card["body"].append(table.to_dict())
+
+    def add_compound_button(self, compound_button: CompoundButton):
+        """
+        Add a CompoundButton to the card.
+
+        Args:
+            title (str): the title
+            badge (str): the badge on it
+            separator (bool): use a separator or not
+            description (str): describe what this element is for
+        """
+        self.card["body"].append(compound_button.to_dict())
 
     def add_background(self, url, fill_mode=None, horizontal_alignment=None, vertical_alignment=None):
         """

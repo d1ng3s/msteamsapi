@@ -1,7 +1,7 @@
 line-length = 120
 indent-width = 4
 
-exclude = [
+extend-exclude = [
     ".git",
     ".ruff_cache",
     ".tox",
@@ -11,6 +11,7 @@ exclude = [
     "_build",
     "build",
     "dist",
+    "tests",
 ]
 
 [lint]

@@ -6,3 +6,5 @@ logs/
 .pytest_cache/
 *.pyc
 .env
+msteamsapi.code-workspace
+.devcontainer/

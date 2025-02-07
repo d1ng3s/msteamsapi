@@ -29,7 +29,7 @@ class TextBlock(object):
     ):
         self.text_block = {
             "type": "TextBlock",
-            "text": text,
+            "text": str(text),
             "wrap": wrap,
             "style": style.value,
             "size": size.value,

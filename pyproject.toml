@@ -1,6 +1,6 @@
 [project]
 name = "msteamsapi"
-version = "0.10.0"
+version = "0.10.2"
 description = "Microsoft Teams AdaptiveCards API Wrapper for Python 2 and 3"
 authors = [
     {name="Alexey Rubasheff", email= "alexey.rubasheff@gmail.com"},

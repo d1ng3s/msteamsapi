@@ -44,7 +44,7 @@ def test_table():
     card.add_url_button("Check it out", "http://www.google.com")
     card.add_url_button("Check this out too", "http://www.google.be")
     webhook.add_cards(card)
-    webhook.send()
+    webhook.send(Channel="Test")
 
 
 # def test_happy_pass():
